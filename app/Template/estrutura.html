@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="../img/batman-icon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD MVC PHP</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: blueviolet;
+        }
+
+        #corpo {
+            width: 80%;
+            background-color: #FFF;
+            margin: 0 auto;
+            border-left: 2px solid rgb(133, 133, 133);
+            border-right: 2px solid rgb(133, 133, 133);
+        }
+
+        #topo {
+            padding: 20px 25px;
+            border-bottom: 2px solid rgb(133, 133, 133);
+        }
+
+        #topo a {
+            color: #333;
+            text-decoration: none;
+            font: 20px arial;
+        }
+
+        #topo a:hover {
+            text-decoration: underline;
+            color: rgb(119, 43, 138);
+            transition: 0.3s;
+            padding:10px 15px;
+            background-color: rgb(198, 179, 211);
+            border-radius: 15px;
+        }
+
+        .fluutacao-dir{
+            float:right;
+        }
+        
+        #conteudo {
+            background-color: #FFF;
+            padding: 20px 25px;
+        }
+
+        #conteudo h1 {
+            font: 24px Arial;
+            color: rgb(119, 43, 138);
+            margin-bottom: 20px;
+        }
+
+        #conteudo h2 {
+            font: 24px Arial;
+            color: rgb(119, 43, 138);
+        }        
+
+        #conteudo article {
+            margin-bottom: 20px;
+        }
+
+        article h2 {
+            padding-bottom: 7px;
+        }
+
+        article h2 a {
+            font: 22px Arial;
+            color: rgb(55, 55, 55);
+        }
+
+        article h2 a:hover {
+            text-decoration: underline;
+            color: rgb(119, 43, 138);
+            transition: 0.3s;
+        }
+
+        article p {
+            font: 18px arial;
+            color: #333;
+            padding-left: 2px;
+        }
+    </style>
+    <div id="corpo">
+        <div id="topo">
+            <header>
+                <nav>
+                    <a href="{{link_base}}home">Home</a> |
+                    <a href="{{link_base}}sobre">Sobre</a>
+                    <a href="{{link_base}}admin&metodo=index" class="fluutacao-dir">Gerenciar</a>
+                </nav>
+            </header>
+        </div>
+        <div id=conteudo>
+            {{area_dinamica}}
+        </div>
+    </div>
+</body>
+
+</html>

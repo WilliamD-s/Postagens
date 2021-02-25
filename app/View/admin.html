@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de conteúdo</title>
+    <style>
+        #titulo {
+            color: #333;
+            text-decoration: none;
+            font: 20px arial;
+        }
+
+        #titulo:hover {
+            text-decoration: underline;
+            color: rgb(119, 43, 138);
+            transition: 0.3s;
+            padding:10px 15px;
+            background-color: rgb(198, 179, 211);
+            border-radius: 15px;
+        }
+        table{
+            width:100%;
+            text-align:center;
+            border:1px solid black;
+            font-family: arial;
+            color:rgb(73, 73, 73);
+        }
+        table a{
+            text-decoration: none;
+            color:rgb(97, 10, 114) !important;
+        }
+        table td{
+            height: 26px;
+            border-bottom:1px solid #333;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <a id="titulo" href="{{link_base}}admin&metodo=create" style="text-decoration: none;color:black;">Criar Postagem</a>
+    <br><br>
+    <hr><br>
+    {% if postagens == null %}
+            <span>Nenhuma postagem disponível</span>
+    {% else %}
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Alterar</th>
+                <th>Deletar</th>
+            </tr>
+                {% for postagem in postagens %}
+                <tr>
+                    <td>{{postagem.id}}</td>
+                    <td width="75%">{{postagem.titulo}}</td>
+                    <td><a href="{{link_base}}admin&metodo=modify&id={{postagem.id}}">Alterar</a></td>
+                    <td><a href="{{link_base}}admin&metodo=delete&id={{postagem.id}}">Deletar</a></td>
+                </tr>
+                {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <section>
+            <article>
+                <header>
+                    <h2>{{titulo}}</h2>
+                    <p>{{conteudo}}</p>
+                </header>
+                <br><hr><br>
+                <form action="{{link_base}}post&metodo=comentar" method="post">
+                    <span>Nome:</span><br>
+                    <input type="text" autocomplete="off" name="nome" style="width:40%;height:25px"><br><br>
+                    <span>Comentario:</span><br>
+                    <textarea name="msg" cols="30" rows="5" style="width:100%;resize:none;"></textarea><br><br>
+                    <input type="hidden" name="id" value="{{id}}">
+                    <input type="submit" value="Comentar">
+                </form>
+                <br><hr><br>
+                {% if comentarios == null %}
+                    <span>Nenhum comentário para essa postagem</span>
+                {% else %}
+                    {% for comentario in comentarios %}
+                        <h3>{{comentario.nome}}</h3>
+                        <span>{{comentario.mensagem}}</span>
+                        <br><br>
+                    {% endfor %}
+                {% endif %}
+            </article>
+    </section>
+</html>
