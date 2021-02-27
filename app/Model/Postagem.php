@@ -6,7 +6,7 @@ class Postagem{
         
         $con = Connection::getConn();
         $sql = $con->prepare("SELECT * FROM postagem ORDER BY id DESC");
-        $sql->execute();
+        $res = $sql->execute();
 
         $resultado = array();
 
@@ -14,8 +14,8 @@ class Postagem{
             $resultado[] = $row;
         }
 
-        if(!$resultado){
-            throw new Exception("Não foi encontrado nenhum registro no banco");
+        if($res == false){
+            throw new Exception("Erro ao consultar o banco!");
         }
 
         return $resultado;
@@ -57,7 +57,6 @@ class Postagem{
             throw new Exception("Falha ao inserir nova postagem");
             return false;
         }
-
         return true;
     }
 

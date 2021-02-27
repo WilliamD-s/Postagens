@@ -49,8 +49,7 @@ class AdminController{
     public function insert(){
 
         try{
-            Postagem::insert($_POST);
-            echo '<script>alert("Publicação inserida com sucesso!")</script>';   
+            Postagem::insert($_POST); 
             echo '<script>location.href = "'.AdminController::route("admin&metodo=index").'"</script>';
         }catch(Exception $e){
             echo '<script>alert("'.$e->getMessage().'")</script>';    
