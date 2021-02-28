@@ -16,7 +16,6 @@ utilizei como base em uma série de tutoriais no youtube respeito do padrão MVC
 - HTML
 - CSS
 - Javascript
-- Bootstrap
 
 ## Layout Web
 ![Layout home](assets/1.png) ![Layout home](assets/2.png) ![Layout home](assets/3.png)
