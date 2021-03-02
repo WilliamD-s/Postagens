@@ -2,7 +2,7 @@
 ![GitHub](https://img.shields.io/github/license/WilliamD-s/Postagens)
 
 # Sobre o Projeto
-Projeto realizado apenas para estudos para compreender mais a respeito de como criar sistemas em padrão MVC (Model, View Controlle) apenas com PHP, 
+Projeto realizado apenas para estudos para compreender mais a respeito de como criar sistemas em padrão MVC (Model, View Controller) apenas com PHP, 
 utilizei como base em uma série de tutoriais no youtube respeito do padrão MVC com este mesmo projeto de postagens. 
 #### série de tutoriais mencionado https://www.youtube.com/playlist?list=PLgbAYUnxJ2NE6eM2xkOlpqJ5sl37bLyKx
 
