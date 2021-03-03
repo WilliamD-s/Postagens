@@ -42,7 +42,7 @@ utilizei como base em uma série de tutoriais no youtube respeito do padrão MVC
       - id_postagem INT(4)
       
   # alterar dentro de app/lib/Database/Connection.php os valores 
-    "seu_HOST", "eu_DB", "seu_USUARIO" e "sua_SENHA" para os referentes ao seu banco Mysql criado
+    "seu_HOST", "seu_DB", "seu_USUARIO" e "sua_SENHA" para os referentes ao seu banco Mysql criado
    
   # executar o projeto
   php -S localhost
