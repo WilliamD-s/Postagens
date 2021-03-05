@@ -1,18 +1,24 @@
 # Postagens
-![GitHub](https://img.shields.io/github/license/WilliamD-s//CadastroDoacoes)
+![GitHub](https://img.shields.io/github/license/WilliamD-s/Postagens)
 
 # Sobre o Projeto
-Projeto realizado utilizando padrão MVC em PHP para um CRUD mais complexo e detalhado para registro de Doações em dinheiro (ainda em andamento). 
+Projeto realizado apenas para estudos para compreender mais a respeito de como criar sistemas em padrão MVC (Model, View Controller) apenas com PHP, 
+utilizei como base em uma série de tutoriais no youtube respeito do padrão MVC com este mesmo projeto de postagens. 
+#### série de tutoriais mencionado https://www.youtube.com/playlist?list=PLgbAYUnxJ2NE6eM2xkOlpqJ5sl37bLyKx
 
 ## Técnologias utilizadas
 ## Back end
 - PHP
-- - MySQL
-- 
+- Composer
+- Twig
+- MySQL
 ## Front end
 - HTML
 - CSS
 - Javascript
+
+## Layout Web
+![Layout home](assets/1.png) ![Layout home](assets/2.png) ![Layout home](assets/3.png)
 
 # Como executar o projeto
 
@@ -20,14 +26,28 @@ Projeto realizado utilizando padrão MVC em PHP para um CRUD mais complexo e det
 ```bash
   # Clonar Repositório
     gh repo clone WilliamD-s/Postagens
+   
+  # entrar na pasta do projeto
+    cd postagens
     
+  # criar tabelas no banco MySQL
+  - postagem 
+      - id INT(4) PK auto_increment
+      - titulo VARCHAR (45)
+      - conteudo TEXT
+    - comentario 
+      - id INT(4) PK auto_increment
+      - nome VARCHAR (45)
+      - mensagem TEXT
+      - id_postagem INT(4)
+      
+  # alterar dentro de app/lib/Database/Connection.php os valores 
+    "seu_HOST", "seu_DB", "seu_USUARIO" e "sua_SENHA" para os referentes ao seu banco Mysql criado
+   
   # executar o projeto
   php -S localhost
   
   ```
-  ## Obs:
-  por enquanto ainda estou trabalhando no projeto portanto ainda não defini estruturas para o banco.
-  
   # Autor
   William de Souza
   
