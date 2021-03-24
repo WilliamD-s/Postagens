@@ -6,7 +6,7 @@ Projeto realizado apenas para estudos para compreender mais a respeito de como c
 utilizei como base em uma série de tutoriais no youtube respeito do padrão MVC com este mesmo projeto de postagens. 
 #### série de tutoriais mencionado https://www.youtube.com/playlist?list=PLgbAYUnxJ2NE6eM2xkOlpqJ5sl37bLyKx
 
-## Técnologias utilizadas
+## Tecnologias utilizadas
 ## Back end
 - PHP
 - Composer
